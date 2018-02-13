@@ -1,0 +1,21 @@
+.label{
+    width:150px;
+    height:150px;
+    background-color: aqua;
+    border-radius: 8px;
+    border-color: solid 1px black;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+}
+#log{
+    overflow: scroll;
+    width: 600px;
+    height:200px;
+}
+.win{
+    color:green;
+}
+.loss{
+    color:red;
+}

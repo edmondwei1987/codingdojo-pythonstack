@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Registration Form</title>
+</head>
+
+<body>
+    <p>
+        {% with success=get_flashed_messages(category_filter=["success"]) %}
+        {% if success%}
+        {% for suc in success%}
+        {{suc}}
+        {%endfor%}
+        {%endif%}
+        {%endwith%}
+        {% with blank=get_flashed_messages(category_filter=["blank"]) %}
+        {% if blank%}
+        {% for bla in blank%}
+        {{bla}}
+        {%endfor%}
+        {%endif%}
+        {%endwith%}
+        {% with match=get_flashed_messages(category_filter=["match"]) %}
+        {% if match%}
+        {% for mat in match%}
+        {{mat}}
+        {%endfor%}
+        {%endif%}
+        {%endwith%}
+        {% with pword=get_flashed_messages(category_filter=["password"]) %}
+        {% if pword%}
+        {% for pwo in pword%}
+        {{pwo}}
+        {%endfor%}
+        {%endif%}
+        {%endwith%}
+    </p>
+    <form action="/validate" method='post'>
+        <h1>Registration Form</h1>
+        Email:
+        <input type="text" name="email">
+        {% with email=get_flashed_messages(category_filter=["email"]) %}
+        {% if email%}
+        {% for ema in email%}
+        {{ema}}
+        {%endfor%}
+        {%endif%}
+        {%endwith%}
+        </br>
+        First Name:
+        <input type="text" name="fname">
+        {% with fname=get_flashed_messages(category_filter=["fname"]) %}
+        {% if fname%}
+        {% for fna in fname%}
+        {{fna}}
+        {%endfor%}
+        {%endif%}
+        {%endwith%}
+        </br>
+        Last Name:
+        <input type="text" name="lname">
+        {% with lname=get_flashed_messages(category_filter=["lname"]) %}
+        {% if lname%}
+        {% for lna in lname%}
+        {{lna}}
+        {%endfor%}
+        {%endif%}
+        {%endwith%}
+        </br>
+        Password:
+        <input type="text" name="password">
+        </br>
+        Confirm Password:
+        <input type="text" name="cpassword">
+        </br>
+        Birthday: mm/dd/yyyy
+        <input type="text" name="birthday">
+        </br>
+        <input type="submit" value="submit">
+    </form>
+</body>
+
+</html>

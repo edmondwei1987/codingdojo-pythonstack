@@ -1,0 +1,21 @@
+#body{
+    text-align: center;
+}
+#success{
+    width:100px;
+    height:100px;
+    background-color: green;
+    text-align: center;
+    color: white;
+    margin:0px;
+    display: inline-block;
+}
+#fail{
+    width:100px;
+    height:100px;
+    background-color: red;
+    text-align: center;
+    color:white;
+    margin:0px;
+    display: inline-block;
+}
